@@ -6,13 +6,13 @@
 
 To install for usage with node.js
 
-    npm install scrollbarWidth
+    npm install scrollbar-width
 
 Then just call once in the setup of your page
 
-    require("scrollbarWidth");
+    require("scrollbar-width");
 
-A global variable `SCROLLBAR_WIDTH` will then be available.
+A global variable `global.SCROLLBAR_WIDTH` will then be available.
 
 ### Browser
 
