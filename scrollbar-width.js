@@ -35,9 +35,8 @@ Olmo Kramer
 
         if(typeof module !== "undefined") {
             module.exports = SCROLLBAR_WIDTH;
-        } else {
-            root.SCROLLBAR_WIDTH = SCROLLBAR_WIDTH;
         }
+        root.SCROLLBAR_WIDTH = SCROLLBAR_WIDTH;
     }
 
     /*

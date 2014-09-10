@@ -14,6 +14,12 @@ Then just call once in the setup of your page
 
 A global variable `global.SCROLLBAR_WIDTH` will then be available.
 
+Alternatively, you can do
+
+    var scrollbarWidth = require("scrollbar-width");
+
+Then the width will be available from the variable.
+
 ### Browser
 
 To install in the browser just save scrollbarWidth.js to your project and include it in your html.
