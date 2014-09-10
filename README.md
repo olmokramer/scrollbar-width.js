@@ -17,7 +17,7 @@ A global variable `global.SCROLLBAR_WIDTH` will then be available.
 ### Browser
 
 To install in the browser just save scrollbarWidth.js to your project and include it in your html.
-A global variable `SCROLLBAR_WIDTH` will then be available.
+A global variable `window.SCROLLBAR_WIDTH` will then be available.
 
 ## <a name="compatibility"></a>Compatibility
 
@@ -29,7 +29,7 @@ Tested in and compatible with:
 ## <a name="issues"></a>Issues
 
 If you have any issues, you can file an issue on the
-[github page](https://github.com/olmokramer/scrollbarWidth.js/issues).
+[github page](https://github.com/olmokramer/scrollbar-width.js/issues).
 
 
 ## <a name="contact"></a>Contact
