@@ -1,4 +1,7 @@
 {
     "name": "scrollbarWidth",
-    "main": "scrollbarWidth"
+    "main": "scrollbarWidth",
+    "description": "Calculate the width of the scrollbar in a browser window",
+    "version": "1.0.0",
+    "repository": "https://github.com/olmokramer/scrollbar-width.js"
 }
