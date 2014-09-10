@@ -31,12 +31,6 @@ Tested in and compatible with:
 If you have any issues, you can file an issue on the
 [github page](https://github.com/olmokramer/scrollbar-width.js/issues).
 
-
-## <a name="contact"></a>Contact
-Olmo Kramer
-- github.com: https://github.com/olmokramer
-- email: [olmo [dot] kramer [at] gmail [dot] com](mailto:olmo.kramer@gmail.com)
-
 ## <a name="license"></a>License
 
 scrollbarWidth is licensed under the [MIT license](LICENSE).
