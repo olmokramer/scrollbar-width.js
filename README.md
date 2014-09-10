@@ -1,4 +1,4 @@
-# [scrollbar-width.js](https://github.com/olmokramer/scrollbar-width.js) 1.0.1
+# [scrollbar-width.js](https://github.com/olmokramer/scrollbar-width.js) 1.0.2
 
 ## <a name="installation-usage"></a>Installation/Usage
 
