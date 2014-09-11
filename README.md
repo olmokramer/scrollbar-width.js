@@ -1,4 +1,4 @@
-# [scrollbar-width.js](https://github.com/olmokramer/scrollbar-width.js) 1.0.3
+# [scrollbar-width.js](https://github.com/olmokramer/scrollbar-width.js) 1.0.4
 
 ## <a name="installation-usage"></a>Installation/Usage
 
@@ -14,15 +14,9 @@ Then just call once in the setup of your page
 
 A global variable `global.SCROLLBAR_WIDTH` will then be available.
 
-Alternatively, you can do
-
-    var scrollbarWidth = require("scrollbar-width");
-
-Then the width will be available from the variable.
-
 ### Browser
 
-To install in the browser just save scrollbarWidth.js to your project and include it in your html.
+To install in the browser just add scrollbarWidth.js to your project and include it in your html.
 A global variable `window.SCROLLBAR_WIDTH` will then be available.
 
 ## <a name="compatibility"></a>Compatibility
