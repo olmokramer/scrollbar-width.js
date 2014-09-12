@@ -1,4 +1,4 @@
-# [scrollbar-width.js](https://github.com/olmokramer/scrollbar-width.js) 1.0.4
+# [scrollbar-width.js](https://github.com/olmokramer/scrollbar-width.js) 1.0.6
 
 ## <a name="installation-usage"></a>Installation/Usage
 
@@ -12,7 +12,7 @@ Then just call once in the setup of your page
 
     require("scrollbar-width");
 
-A global variable `global.SCROLLBAR_WIDTH` will then be available.
+A global variable `window.SCROLLBAR_WIDTH` will then be available.
 
 ### Browser
 
