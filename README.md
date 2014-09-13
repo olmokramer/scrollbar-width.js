@@ -1,4 +1,4 @@
-# [scrollbar-width.js](https://github.com/olmokramer/scrollbar-width.js) 1.0.6
+# [scrollbar-width.js](https://github.com/olmokramer/scrollbar-width.js) 1.0.7
 
 ## <a name="installation-usage"></a>Installation/Usage
 
@@ -18,6 +18,15 @@ A global variable `window.SCROLLBAR_WIDTH` will then be available.
 
 To install in the browser just add scrollbarWidth.js to your project and include it in your html.
 A global variable `window.SCROLLBAR_WIDTH` will then be available.
+
+### Notes
+
+The function will run when one of these events is triggered, and before that the variable will not be available
+
+    doc.addEventListener('DOMContentLoaded');
+    window.addEventListener('load');
+    doc.attachEvent('onreadystatechange');
+    window.attachEvent('onload');
 
 ## <a name="compatibility"></a>Compatibility
 
