@@ -1,40 +1,43 @@
 # scrollbar-width.coffee
 #
-# calculates the width of the scrollbar in the browser
-# and sets a property SCROLLBAR_WIDTH on the window or
-# global object with the value.
-#
-# AUTHOR:
-# Olmo Kramer
-# - github.com: https://github.com/olmokramer
-# - email: olmo.kramer@gmail.com
-# - web: http://www.olmokramer.nl
+# calculate the width of the scrollbar in the browser.
+# exports a function (AMD/CommonJS), or sets function
+# window.scrollbarWidth (standard browser environment)
+# Will cache the value, untill the function is called
+# with the recalculate parameter set to true.
 
-doc = window.document
+factory = (doc) ->
+  scrollbarWidth = null
 
-ready = ->
+  (recalculate = false) ->
+    return scrollbarWidth if scrollbarWidth? and not recalculate
+
+    return undefined if doc.readyState is 'loading'
+
     div1 = doc.createElement 'div'
-    div1.style.width = '100px'
-    div1.style.overflowX = 'scroll'
-
     div2 = doc.createElement 'div'
-    div2.style.width = '100px'
+
+    div1.style.width = div2.style.width = '100px'
+    div1.style.overflowX = 'scroll'
+    div2.style.overflowY = 'hidden'
 
     doc.body.appendChild div1
     doc.body.appendChild div2
 
-    SCROLLBAR_WIDTH = div1.offsetHeight - div2.offsetHeight
+    scrollbarWidth = div1.offsetHeight - div2.offsetHeight
 
     doc.body.removeChild div1
     doc.body.removeChild div2
 
-    window.SCROLLBAR_WIDTH = SCROLLBAR_WIDTH
+    scrollbarWidth
 
-readyStateChange = ->
-    if doc.readyState is 'complete'
-        ready()
-
-doc.addEventListener? 'DOMContentLoaded', ready, false
-window.addEventListener? 'load', ready, false
-doc.attachEvent? 'onreadystatechange', readyStateChange
-window.attachEvent? 'onload', ready
+do (root = @, factory) ->
+  unless root.document?
+    return console.warn 'WARNING: root.document doesn\'t exist'
+  if typeof define is 'function' and define.amd
+    define [], ->
+      factory root.document
+  else if typeof exports isnt 'undefined'
+    module.exports = factory()
+  else
+    root.scrollbarWidth = factory()

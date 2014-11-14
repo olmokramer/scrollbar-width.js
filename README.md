@@ -1,45 +1,76 @@
-# [scrollbar-width.js](https://github.com/olmokramer/scrollbar-width.js) 1.0.7
+# [scrollbar-width.js](https://github.com/olmokramer/scrollbar-width.js) 2.0.0
 
-## <a name="installation-usage"></a>Installation/Usage
+scrollbar-width.js is a library for calculating the scrollbar size of a browser window. It is compatible with AMD, CommonJS and the standard browser environment.
 
-### Node.js ([atom-shell](https://github.com/atom/atom-shell), [node-webkit](https://github.com/rogerwang/node-webkit) etc.)
+## Installation/Usage
 
-To install for usage with node.js
+### AMD
 
-    npm install scrollbar-width
+Usage with AMD is straightforward:
 
-Then just call once in the setup of your page
+```
+require([
+  'js/scrollbar-width'
+], function(calcScrollbarWidth) {
+  var scrollbarWidth = calcScrollbarWidth();
+  // ...
+});
+```
 
-    require("scrollbar-width");
+### Node.js
 
-A global variable `window.SCROLLBAR_WIDTH` will then be available.
+Install with npm:
+
+```
+npm install scrollbar-width
+```
+
+Then require it and call the function:
+
+```
+var scrollbarWidth = require("scrollbar-width")();
+```
 
 ### Browser
 
-To install in the browser just add scrollbarWidth.js to your project and include it in your html.
-A global variable `window.SCROLLBAR_WIDTH` will then be available.
+Include it in your HTML:
 
-### Notes
+```
+<script src="js/scrollbar-width.js"></script>
+```
 
-The function will run when one of these events is triggered, and before that the variable will not be available
+Then just call the function:
 
-    doc.addEventListener('DOMContentLoaded');
-    window.addEventListener('load');
-    doc.attachEvent('onreadystatechange');
-    window.attachEvent('onload');
+```
+var scrollbarWidth = window.scrollbarWidth();
+```
 
-## <a name="compatibility"></a>Compatibility
+## Notes
+
+### Cached value
+
+The function will cache the value it has calculated. You can force to calculate again by calling it with it's first parameter set to `true`:
+
+```
+var newScrollbarWidth = calcScrollbarWidth(true);
+```
+
+### scrollbarWidth() returns undefined
+
+Until the document is loaded (document.readyState !== 'loading'), scrollbarWidth() will return undefined. So be sure to call it when the document has loaded.
+
+## Compatibility
 
 Tested in and compatible with:
 - Chrome (35.0.1916.153)
 - FireFox (IceWeasel 30.0)
 - IE (8+)
 
-## <a name="issues"></a>Issues
+## Issues
 
-If you have any issues, you can file an issue on the
+If you find any issues, please file an issue on the
 [github page](https://github.com/olmokramer/scrollbar-width.js/issues).
 
-## <a name="license"></a>License
+## License
 
 scrollbarWidth is licensed under the [MIT license](LICENSE).
