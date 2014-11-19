@@ -39,9 +39,9 @@
         return factory(root.document);
       });
     } else if (typeof exports !== 'undefined') {
-      return module.exports = factory();
+      return module.exports = factory(root.document);
     } else {
-      return root.scrollbarWidth = factory();
+      return root.scrollbarWidth = factory(root.document);
     }
   })(this, factory);
 

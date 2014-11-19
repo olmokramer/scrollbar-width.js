@@ -1,4 +1,4 @@
-# [scrollbar-width.js](https://github.com/olmokramer/scrollbar-width.js) 2.0.0
+# [scrollbar-width.js](https://github.com/olmokramer/scrollbar-width.js) 2.0.1
 
 scrollbar-width.js is a library for calculating the scrollbar size of a browser window. It is compatible with AMD, CommonJS and the standard browser environment.
 

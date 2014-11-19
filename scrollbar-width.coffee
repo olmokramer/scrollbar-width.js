@@ -38,6 +38,6 @@ do (root = @, factory) ->
     define [], ->
       factory root.document
   else if typeof exports isnt 'undefined'
-    module.exports = factory()
+    module.exports = factory root.document
   else
-    root.scrollbarWidth = factory()
+    root.scrollbarWidth = factory root.document
