@@ -1,4 +1,4 @@
-# [scrollbar-width.js](https://github.com/olmokramer/scrollbar-width.js) 2.0.1
+# [scrollbar-width.js](https://github.com/olmokramer/scrollbar-width.js) 2.0.2
 
 scrollbar-width.js is a library for calculating the scrollbar size of a browser window. It is compatible with AMD, CommonJS and the standard browser environment.
 
@@ -62,14 +62,19 @@ Until the document is loaded (document.readyState !== 'loading'), scrollbarWidth
 ## Compatibility
 
 Tested in and compatible with:
-- Chrome (35.0.1916.153)
-- FireFox (IceWeasel 30.0)
-- IE (8+)
+- Chrome
+- FireFox
+- Opera
+- IE (tested in 8+)
 
 ## Issues
 
 If you find any issues, please file an issue on the
 [github page](https://github.com/olmokramer/scrollbar-width.js/issues).
+
+## Credits
+
+Thanks to [olympicsoftware](https://github.com/olympicsoftware) for the improved version (2.0+)
 
 ## License
 
