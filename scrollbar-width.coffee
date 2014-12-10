@@ -17,14 +17,14 @@ factory = (doc) ->
     div1 = doc.createElement 'div'
     div2 = doc.createElement 'div'
 
-    div1.style.width = div2.style.width = '100px'
-    div1.style.overflowX = 'scroll'
-    div2.style.overflowY = 'hidden'
+    div1.style.width = div2.style.width = div1.style.height = div2.style.height = '100px'
+    div1.style.overflow = 'scroll'
+    div2.style.overflow = 'hidden'
 
     doc.body.appendChild div1
     doc.body.appendChild div2
 
-    scrollbarWidth = div1.offsetHeight - div2.offsetHeight
+    scrollbarWidth = Math.abs div1.scrollHeight - div2.scrollHeight
 
     doc.body.removeChild div1
     doc.body.removeChild div2
