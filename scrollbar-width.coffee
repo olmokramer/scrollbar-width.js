@@ -6,6 +6,8 @@
 # Will cache the value, untill the function is called
 # with the recalculate parameter set to true.
 
+'use strict'
+
 factory = (doc) ->
   scrollbarWidth = null
 
@@ -40,4 +42,4 @@ do (root = @, factory) ->
   else if typeof exports isnt 'undefined'
     module.exports = factory root.document
   else
-    root.scrollbarWidth = factory root.document
+    root.getScrollbarWidth = factory root.document
