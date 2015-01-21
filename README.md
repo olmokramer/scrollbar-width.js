@@ -1,4 +1,4 @@
-# [scrollbar-width.js](https://github.com/olmokramer/scrollbar-width.js) 2.0.2
+# [scrollbar-width.js](https://github.com/olmokramer/scrollbar-width.js) 3.0.0
 
 scrollbar-width.js is a library for calculating the scrollbar size of a browser window. It is compatible with AMD, CommonJS and the standard browser environment.
 
@@ -42,7 +42,7 @@ Include it in your HTML:
 Then just call the function:
 
 ```
-var scrollbarWidth = window.scrollbarWidth();
+var scrollbarWidth = window.getScrollbarWidth();
 ```
 
 ## Notes

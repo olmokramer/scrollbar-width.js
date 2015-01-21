@@ -14,7 +14,7 @@ factory = (doc) ->
   (recalculate = false) ->
     return scrollbarWidth if scrollbarWidth? and not recalculate
 
-    return undefined if doc.readyState is 'loading'
+    return null if doc.readyState is 'loading'
 
     div1 = doc.createElement 'div'
     div2 = doc.createElement 'div'
@@ -42,4 +42,4 @@ do (root = @, factory) ->
   else if typeof exports isnt 'undefined'
     module.exports = factory root.document
   else
-    root.getScrollbarWidth = factory root.document
+    root.getScrollbarWidth ?= factory root.document
