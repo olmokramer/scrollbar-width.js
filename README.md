@@ -55,9 +55,9 @@ The function will cache the value it has calculated. You can force to calculate 
 var newScrollbarWidth = calcScrollbarWidth(true);
 ```
 
-### scrollbarWidth() returns undefined
+### scrollbarWidth() returns null
 
-Until the document is loaded (document.readyState !== 'loading'), scrollbarWidth() will return undefined. So be sure to call it when the document has loaded.
+Until the document is loaded (document.readyState !== 'loading'), scrollbarWidth() will return null. So be sure to call it when the document has loaded.
 
 ## Compatibility
 
