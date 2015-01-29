@@ -31,6 +31,14 @@ Then require it and call the function:
 var scrollbarWidth = require("scrollbar-width")();
 ```
 
+### Bower
+
+To install with Bower run:
+
+```
+bower install scrollbar-width.js
+```
+
 ### Browser
 
 Include it in your HTML:
