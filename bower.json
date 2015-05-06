@@ -1,7 +1,7 @@
 {
   "name": "scrollbar-width.js",
   "main": "scrollbar-width.min.js",
-  "version": "3.1.0",
+  "version": "3.1.1",
   "homepage": "https://github.com/olmokramer/scrollbar-width.js",
   "authors": [
     "Olmo Kramer <olmo.kramer@gmail.com>"
