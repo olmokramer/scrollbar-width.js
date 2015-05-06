@@ -8,38 +8,33 @@
 
 'use strict'
 
-factory = (doc) ->
-  scrollbarWidth = null
+scrollbarWidth = null
 
-  (recalculate = false) ->
-    return scrollbarWidth if scrollbarWidth? and not recalculate
+getScrollbarWidth = (recalculate = false) ->
+  return scrollbarWidth if scrollbarWidth? and not recalculate
 
-    return null if doc.readyState is 'loading'
+  return null if document.readyState is 'loading'
 
-    div1 = doc.createElement 'div'
-    div2 = doc.createElement 'div'
+  div1 = document.createElement 'div'
+  div2 = document.createElement 'div'
 
-    div1.style.width = div2.style.width = div1.style.height = div2.style.height = '100px'
-    div1.style.overflow = 'scroll'
-    div2.style.overflow = 'hidden'
+  div1.style.width = div2.style.width = div1.style.height = div2.style.height = '100px'
+  div1.style.overflow = 'scroll'
+  div2.style.overflow = 'hidden'
 
-    doc.body.appendChild div1
-    doc.body.appendChild div2
+  document.body.appendChild div1
+  document.body.appendChild div2
 
-    scrollbarWidth = Math.abs div1.scrollHeight - div2.scrollHeight
+  scrollbarWidth = Math.abs div1.scrollHeight - div2.scrollHeight
 
-    doc.body.removeChild div1
-    doc.body.removeChild div2
+  document.body.removeChild div1
+  document.body.removeChild div2
 
-    scrollbarWidth
+  scrollbarWidth
 
-do (root = @, factory) ->
-  unless root.document?
-    return console.warn 'WARNING: root.document doesn\'t exist'
-  if typeof define is 'function' and define.amd
-    define [], ->
-      factory root.document
-  else if typeof exports isnt 'undefined'
-    module.exports = factory root.document
-  else
-    root.getScrollbarWidth ?= factory root.document
+if typeof define is 'function' and define.amd
+  define [], -> getScrollbarWidth
+else if typeof exports isnt 'undefined'
+  module.exports = getScrollbarWidth
+else
+  @getScrollbarWidth = getScrollbarWidth
